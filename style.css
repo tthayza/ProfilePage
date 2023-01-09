@@ -24,6 +24,70 @@ header {
   padding: 30px;
 }
 
+button {
+  position: relative;
+  border-radius: 40px;
+  height: 45px;
+  background-color: #4a2753;
+  color: #a49bcf;
+  border: #4a2753;
+  letter-spacing: 0.8px;
+  padding: 10px;
+}
+
+button:hover {
+  letter-spacing: 1.8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+button i::before {
+  content: '';
+  position: absolute;
+  left: 80%;
+  width: 12px;
+  height: 2px;
+  background-color: #9c89c5;
+  transform: translateX(-50%) skewX(325deg);
+  transition: 0.3s;
+}
+
+button:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+
+button i::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 12px;
+  height: 2px;
+  background-color: #9c89c5;
+  transform: translateX(-50%) skewX(325deg);
+  transition: 0.3s;
+}
+
+button:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 14px;
+}
+
 section h2 {
   color: #200340;
   font-weight: bold;
