@@ -88,6 +88,43 @@ div {
   padding: 14px;
 }
 
+h2 span {
+  font-size: 16px;
+}
+
+span::before {
+  content: none;
+  animation: animate infinite 5s;
+}
+
+@keyframes animate {
+  0% {
+    content: 'HTML5';
+    color: #4a2753;
+  }
+
+  25% {
+    content: 'CSS3';
+    color: #4a2753;
+  }
+
+  50% {
+    content: 'JavaScript';
+    color: #4a2753;
+  }
+
+  75% {
+    content: 'Python';
+    color: #4a2753;
+  }
+
+  100% {
+    content: 'E buscando mais...';
+    color: #4a2753;
+  }
+}
+
+
 section h2 {
   color: #200340;
   font-weight: bold;
