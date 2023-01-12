@@ -45,6 +45,7 @@ button {
   border: #4a2753;
   letter-spacing: 0.8px;
   padding: 10px;
+  font-size: 17px;
 }
 
 button:hover {
@@ -135,7 +136,6 @@ span::before {
     color: #4a2753;
   }
 }
-
 
 section h2 {
   color: #200340;
