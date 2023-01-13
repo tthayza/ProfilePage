@@ -4,24 +4,26 @@
   box-sizing: border-box;
   font-family: 'Tajawal', sans-serif;
 }
-
 body {
-  background-image: linear-gradient(
-    180deg,
-    #7a6b8b 0%,
-    #9c89c5 50.52%,
-    #a49bcf 78%
-  );
-  width: 100vw;
+  background-color: rgb(65, 2, 14);
+  display: flex;
+  justify-content: center;
+}
+#container {
+  background-color: rgb(167, 115, 122);
+  width: 40vw;
   height: 100vh;
   display: flex;
-  align-items: center;
   flex-direction: column;
   position: relative;
 }
 
 header {
-  padding: 30px;
+  padding: 20px;
+  background-color: rgba(250, 235, 215, 0.329);
+  width: 50%;
+  border-radius: 10%;
+  margin: 10px;
 }
 
 header img {
@@ -34,18 +36,19 @@ header img:hover {
   filter: none;
   transition: 0.6s;
   cursor: pointer;
+  border: solid 1px crimson;
 }
 
 button {
   position: relative;
   border-radius: 40px;
   height: 45px;
-  background-color: #4a2753;
-  color: #a49bcf;
-  border: #4a2753;
+  background-color:rgb(82, 4, 19);
+  color:snow;
+  border: crimson;
   letter-spacing: 0.8px;
   padding: 10px;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 button:hover {
@@ -66,7 +69,7 @@ button i::before {
   left: 80%;
   width: 12px;
   height: 2px;
-  background-color: #9c89c5;
+  background-color:snow;
   transform: translateX(-50%) skewX(325deg);
   transition: 0.3s;
 }
@@ -83,7 +86,7 @@ button i::after {
   left: 20%;
   width: 12px;
   height: 2px;
-  background-color: #9c89c5;
+  background-color: snow;
   transform: translateX(-50%) skewX(325deg);
   transition: 0.3s;
 }
@@ -98,47 +101,54 @@ div {
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  padding: 14px;
+  padding: 12px;
 }
 
 h2 span {
-  font-size: 16px;
+  font-size: 20px;
 }
 
-span::before {
+#main {
+  background-color: rgba(250, 235, 215, 0.179);
+  border-radius: 20px;
+}
+
+.changing-text::before {
   content: none;
   animation: animate infinite 5s;
 }
 
+
+
 @keyframes animate {
   0% {
     content: 'HTML5';
-    color: #4a2753;
+    color: antiquewhite;
   }
 
   25% {
     content: 'CSS3';
-    color: #4a2753;
+    color: antiquewhite;
   }
 
   50% {
     content: 'JavaScript';
-    color: #4a2753;
+    color: antiquewhite;
   }
 
   75% {
     content: 'Python';
-    color: #4a2753;
+    color: antiquewhite;
   }
 
   100% {
     content: 'E buscando mais...';
-    color: #4a2753;
+    color: antiquewhite;
   }
 }
 
 section h2 {
-  color: #200340;
+  color:rgb(56, 0, 14);
   font-weight: bold;
   font-size: 20px;
 }
@@ -147,9 +157,13 @@ ul {
   display: flex;
   list-style: none;
   flex-wrap: wrap;
-  padding: 8px;
+  padding: 2px;
   gap: 26px;
   justify-content: center;
+}
+
+#icons h2 {
+  color: antiquewhite;
 }
 
 section ul li {
@@ -158,4 +172,81 @@ section ul li {
 
 section ul li:hover {
   transform: scale(1.2);
+}
+
+.rating h2 {
+  text-align: center;
+  margin: 2px;
+  color: antiquewhite;
+}
+
+div .stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  height: 60%;
+}
+
+div .stars input {
+  display: none;
+}
+
+.stars > label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  font-size: 25px;
+  opacity: 0.52;
+  cursor: pointer;
+  justify-content: space-around;
+
+}
+
+footer{
+  margin:10px;
+  background-color: rgb(65, 2, 14);
+  width: 104.5%;
+  text-align: center;
+  color:antiquewhite;
+}
+
+footer p {
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+#star-1:checked ~ label[for='star-1'],
+#star-1:hover ~ label[for='star-1'],
+#star-2:checked ~ label[for='star-1'],
+#star-2:checked ~ label[for='star-2'] #star-2:hover ~ label[for='star-1'],
+#star-2:hover ~ label[for='star-2'],
+#star-3:checked ~ label[for='star-1'],
+#star-3:checked ~ label[for='star-2'],
+#star-3:checked ~ label[for='star-3'],
+#star-3:hover ~ label[for='star-1'],
+#star-3:hover ~ label[for='star-2'],
+#star-3:hover ~ label[for='star-3'],
+#star-4:checked ~ label[for='star-1'],
+#star-4:checked ~ label[for='star-2'],
+#star-4:checked ~ label[for='star-3'],
+#star-4:checked ~ label[for='star-4'],
+#star-4:hover ~ label[for='star-1'],
+#star-4:hover ~ label[for='star-2'],
+#star-4:hover ~ label[for='star-3'],
+#star-4:hover ~ label[for='star-4'],
+#star-5:checked ~ label[for='star-1'],
+#star-5:checked ~ label[for='star-2'],
+#star-5:checked ~ label[for='star-3'],
+#star-5:checked ~ label[for='star-4'],
+#star-5:checked ~ label[for='star-5'],
+#star-5:hover ~ label[for='star-1'],
+#star-5:hover ~ label[for='star-2'],
+#star-5:hover ~ label[for='star-3'],
+#star-5:hover ~ label[for='star-4'],
+#star-5:hover ~ label[for='star-5'] {
+  opacity: 1;
+  transform: scale(1.2);
+  transition: 0.5s;
+  letter-spacing: 1.8px;
 }
